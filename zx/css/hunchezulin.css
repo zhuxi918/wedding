@@ -86,3 +86,30 @@
     top:200px;
     left:200px;
 }
+.showDetails .carDetails{
+    width: 1200px;
+    height: 630px;
+    border: 1px solid red;
+    display: flex;
+    justify-content: space-between;
+}
+.car-mPic{
+    width: 540px;
+    height: 440px;
+    overflow: hidden;
+}
+.car-sPic{
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    width: 540px;
+    margin-top: 20px
+}
+.car-sPic li{
+    width: 90px;
+    height: 90px;
+    overflow: hidden;
+}
+.car-sPic img{
+    width:90px ;
+}
