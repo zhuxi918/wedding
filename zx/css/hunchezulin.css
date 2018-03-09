@@ -113,3 +113,36 @@
 .car-sPic img{
     width:90px ;
 }
+.carDetails .details{
+    width: 650px;
+    padding: 40px 10px;
+}
+.carDetails .details>*{
+    display: block;
+    margin-bottom: 10px
+}
+
+.details h1{
+    font-size: 20px;
+    font-weight: 700;
+}
+.details p>span:first-child{
+    font-size: 22px;
+    color: #F83244;
+
+}
+.delete{
+    text-decoration: line-through;
+}
+.carDetails .details ul {
+    display: flex;
+    justify-content:center;
+}
+.carDetails .details ul *{
+    display: block;
+}
+.carDetails .details ul li>span{
+    text-align: center;
+    width: 160px;
+
+}
