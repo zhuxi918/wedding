@@ -1,0 +1,279 @@
+.detailTop{
+    display: flex;
+    justify-content: space-between;
+}
+.pics{
+    width: 480px;
+    height:470px ;
+}
+.pics .mainPic{
+    width: 480px;
+    overflow: hidden;
+    height:360px ;
+    margin-bottom: 20px;
+
+}
+.smPic ul{
+    display: flex;
+    justify-content: space-between;
+}
+.smPic ul li{
+    display: block;
+    /* overflow: hidden; */
+    border: 2px solid transparent;
+    
+}
+.smPic ul li:hover{
+   border-color: #F83244;
+}
+.smPic ul li img{
+    width: 80px;
+}
+.intro{
+    margin-right: 160px;
+}
+.intro h2{
+    font-size: 26px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+.intro .tags{
+    display: flex;
+    justify-content: flex-start
+}
+.intro .tags>span{
+    display: block;
+    margin-right: 10px;
+    padding: 0 8px;
+    border: 1px solid #ccc;
+    color: #aaa;
+    border-radius: 6px;
+}
+.priceTag .onsalePrice{
+    font-size: 28px;
+    color: #F83244;
+}
+.priceTag .removePrice{
+    text-decoration: line-through;
+}
+.btns{
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: 150px;
+}
+.btns .detailBtn{
+    display: block;
+    background: #F83244;
+    color: #fff;
+    width: 40%;
+    font-size: 18px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.onsales .items{
+    width: 200px;
+}
+.onsales .items img{
+    width: 200px;
+    height: 160px;
+} 
+.onsales .items>div{
+    position: relative;
+}
+.onsales h1{
+    text-align: center;
+}
+.onsales .items p{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.2)
+}
+.itemDetails{
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid #aaa; */
+    /* padding: 0 10px; */
+    
+}
+.itemDetails .sideInfo{
+    /* border: 1px solid #aaa; */
+    width: 280px;
+}
+.storeInfo{
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    height: 340px;
+    box-sizing: border-box;
+    padding: 20px 0;
+}
+.storeInfo .avatar img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 10px auto;
+    display: block;
+}
+.storeInfo {
+    text-align: center;
+}
+.storeTitle{
+    font-size: 22px;
+    font-weight: 800;
+    margin: 10px 0;
+}
+.storeBtns{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.storeBtns span{
+    width: 80px;
+    height: 30px;
+    background: #4BCF99;
+    line-height: 30px;
+    color: #fff;
+    text-align: center;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 5PX;
+}
+.hotList{
+    padding: 10px 0;
+}
+.hotList h1{
+    border-left: 5px solid #F83244;
+    padding-left: 10px;
+    font-size: 20px;
+    font-weight: 600;
+}
+.hotList li{
+    margin: 10px 0;
+    padding: 10px 5px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dashed #ccc
+}
+.hotList li img{
+    height: 70px;
+    width: 100px;
+}
+.hotList li div{
+    height: 70px;
+    width: 150px;
+}
+.hotList li h2{
+    font-size: 16px;
+    height:40px ;
+    overflow: hidden;
+}
+.hotList li p{
+    font-size: 12px;
+    color: #F83244
+}
+.mainDetail{
+    width: 900px;
+    border: 1px solid #ccc
+}
+.mainDetail .tabs{
+    display: flex;
+align-items: center;
+background: #fafafa;
+width: 900px;
+
+}
+.mainDetail .tabs span{
+    display: block; 
+    color: #ccc;
+}
+.mainDetail .tabs a{
+    width: 100px;
+    line-height: 50px;
+    height: 50px;
+    display: block;
+    text-align: center;
+    border-top: 3px solid transparent;
+}
+.delete{
+    text-decoration: line-through;
+}
+.price{
+    color: #F83244;
+}
+.mainDetail .tabs a.active{
+    border-top-color: #F83244;
+    border-bottom-color:#fff 
+}
+.scrollHeader{
+    border-bottom: 1px solid #ccc;
+    display: none;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color:#fff; 
+    z-index: 1;
+
+}
+.sMain{
+    width: 1200px;
+    margin: 0 auto;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+.sMain .sInfo{
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+    line-height: 100px;
+    align-items: center;
+}
+.sMain .sInfo .sTitle{
+    font-size: 30px;
+    font-weight: 800;
+}
+.sMain .sInfo .sLable{
+    border: 1px solid #ccc;
+    display: block;
+    height: 20px;
+    line-height: 20px;
+    border-radius: 5px;
+    padding: 2px 5px;
+}
+.sMain .sInfo .sLable:hover{
+    border-color: #F83244;
+}
+.sMain .sInfo .sPrice{
+    color: #F83244;
+    font-size: 20px;
+}
+.sBtns{
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.sBtns span{
+    width: 160px;
+    height: 50px;
+    border: 2px solid #F83244;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #F83244;
+    cursor: pointer;
+}
+.sBtns span:first-child{
+background-color: #F83244;
+color: #fff;
+}
+.scollFloat{
+    position: fixed;
+    top:100px
+}

@@ -1,0 +1,803 @@
+.nano {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden
+}
+
+.nano .content {
+    position: absolute;
+    overflow: scroll;
+    overflow-x: hidden;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0
+}
+
+.nano .content:focus {
+    outline: thin dotted
+}
+
+.nano .content::-webkit-scrollbar {
+    visibility: hidden
+}
+
+.has-scrollbar .content::-webkit-scrollbar {
+    visibility: visible
+}
+
+.nano > .pane {
+    background: rgba(0, 0, 0, 0.25);
+    position: absolute;
+    width: 10px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    visibility: hidden \9;
+    opacity: .01;
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px
+}
+
+.nano > .pane > .slider {
+    background: #444;
+    background: rgba(0, 0, 0, 0.5);
+    position: relative;
+    margin: 0 1px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px
+}
+
+.nano:hover > .pane, .pane.actived, .pane.flashed {
+    visibility: visible \9;
+    opacity: 0.99
+}
+
+.msg-layer {
+    display: none;
+    width: 800px;
+    height: 544px;
+    color: #333;
+    font-size: 14px;
+    margin: 0 auto;
+    overflow: hidden;
+    background: #fff;
+}
+
+.msg-layer .msg-tit {
+    height: 50px;
+    position: relative;
+    line-height: 50px;
+    text-align: center;
+    font-size: 14px;
+    border-bottom: 1px solid #e7e7e7;
+    font-weight: normal
+}
+
+.msg-layer .msg-tit .close, .msg-row .close {
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+    top: 20px;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: url("//7tt06g.com2.z0.glb.qiniucdn.com/assets/chat/msg-close-564afa028e9081bf7b3dfe4575d19c34e7d10d9cfd729fc4f5a492a7ce2c177a.png") no-repeat center
+}
+
+.msg-layer .msg-main {
+    clear: both
+}
+
+.msg-main .msg-user {
+    float: left;
+    width: 238px;
+    height: 400px;
+    padding: 17px 0;
+    background: #fafafa;
+    border-right: 1px solid #e7e7e7
+}
+
+.msg-main .msg-content {
+    float: right;
+    width: 560px;
+    height: 434px
+}
+
+.msg-list .msg-row {
+    height: 55px;
+    border-bottom: 1px solid #e7e7e7;
+    width: 239px;
+    cursor: pointer;
+    position: relative
+}
+
+.msg-row .logo {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    border-radius: 100%;
+    background: #bbcbd7;
+    margin: 13px 5px 14px 25px
+}
+
+.msg-row.opus .logo {
+    width: 46px;
+    height: 28px;
+    border-radius: 5px;
+    margin-left: 18px
+}
+
+.msg-row.hover {
+    background: #fff;
+    border-right: 1px solid #fff
+}
+
+.msg-row:hover {
+    background: #fff
+}
+
+.msg-row:hover .close {
+    visibility: visible
+}
+
+.msg-row .tips {
+    position: absolute;
+    display: block;
+    left: 22px;
+    top: 15px;
+    z-index: 999;
+    width: 8px;
+    height: 8px;
+    background: #ff705e;
+    border-radius: 100%;
+    border: 2px solid #fff
+}
+
+.msg-row.opus .tips {
+    left: 15px;
+    top: 14px
+}
+
+.msg-row .close {
+    width: 10px;
+    background: none;
+    height: 10px;
+    top: 25px;
+    right: 25px;
+    line-height: 10px;
+    text-indent: -2px;
+    visibility: hidden;
+    font-family: Microsoft Yahei;
+    font-size: 22px;
+    color: #999
+}
+
+.msg-row .close:hover {
+    color: #ff705e
+}
+
+.msg-btn .all-msg {
+    display: inline-block;
+    width: 238px;
+    border-right: 1px solid #e7e7e7;
+    height: 59px;
+    line-height: 59px;
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+    text-decoration: none
+}
+
+.msg-btn .all-msg:hover {
+    color: #ff705e
+}
+
+.msg-btn .msg-reply {
+    width: 530px;
+    height: 59px;
+    line-height: 59px;
+    float: right;
+    position: relative;
+    margin-right: 15px
+}
+
+.msg-reply .msg-txt {
+    display: inline-block;
+    box-shadow: inset 2px 0 3px rgba(204, 204, 204, 0.3);
+    background: #fff;
+    border: 1px solid #dde0e3;
+    height: 20px;
+    width: 330px;
+    margin-right: 10px;
+    vertical-align: middle;
+    padding: 5px 10px;
+    padding-right: 30px;
+    color: #333;
+    font: 14px/20px Microsoft Yahei, arial
+}
+
+.msg-reply .btn {
+    display: inline-block;
+    width: 70px;
+    cursor: pointer;
+    height: 32px;
+    text-align: center;
+    background: #ff705e;
+    color: #fff;
+    font: 14px/20px Microsoft Yahei, arial
+}
+
+.msg-reply .pic-btn {
+    text-indent: -9999px;
+    vertical-align: middle;
+    margin-right: 9px;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: url("photo.png") no-repeat center;
+    cursor: pointer
+}
+
+.msg-btn {
+    clear: both;
+    width: 100%;
+    height: 59px;
+    line-height: 59px;
+    border-top: 1px solid #e7e7e7
+}
+
+.msg-box {
+    display: block;
+    padding: 10px 0;
+    overflow: hidden
+}
+
+.msg-box .msg-history {
+    height: 40px;
+    line-height: 35px;
+    text-align: center;
+    font-size: 12px;
+    color: #999;
+    cursor: pointer
+}
+
+.msg-history em {
+    color: #4ea9e9
+}
+
+.msg-box .msg-wrap {
+    width: 540px;
+    height: 370px;
+    overflow: hidden;
+    margin-left: 10px
+}
+
+.msg-mod {
+    padding-top: 10px;
+    padding-right: 20px
+}
+
+.msg-mod .msg-line {
+    clear: both;
+    display: block;
+    width: 100%
+}
+
+.msg-linerow {
+    display: inline-block;
+    position: relative;
+    margin: 0 10px;
+    border: 1px solid #dde0e3;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 30px
+}
+
+.msg-mod .msg-line .icon {
+    position: absolute;
+    left: -8px;
+    top: 10px;
+    display: inline-block;
+    width: 8px;
+    height: 11px;
+    background: url("//7tt06g.com2.z0.glb.qiniucdn.com/assets/chat/msg-arrow-icon-565ea62842d713595b8cf53dff144bb38e13160633be643f5c747f920a98e5f3.png") no-repeat 0 -14px
+}
+
+.msg-mod .msg-line .error {
+    cursor: pointer;
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    display: block;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    background: #ff705e;
+    border-radius: 100%;
+    text-align: center;
+    color: #fff
+}
+
+.msg-mod .msg-line .right {
+    float: right;
+    margin-left: 20px
+}
+
+.msg-mod .msg-line .right .icon {
+    left: auto;
+    right: -8px;
+    background-position: 0 0
+}
+
+.msg-mod .msg-line h3 {
+    line-height: 25px;
+    text-align: justify;
+    color: #000;
+    font-size: 14px;
+    font-weight: normal;
+    max-width: 400px;
+    word-break:break-all;
+
+}
+
+.msg-mod .msg-line p {
+    color: #999;
+    font-size: 12px;
+    height: 15px;
+    margin-top: 5px
+}
+
+.msg-mod .msg-line .msgPic {
+    border-radius: 5px;
+    background: url("//7tt06g.com2.z0.glb.qiniucdn.com/assets/chat/loader10-894762b61cfe4393a32b6f0ec16d11f9aaf5a6af78521d46f9b816c62423a970.gif") no-repeat center center #fff;
+    display: inline-block;
+    image-orientation: from-image;
+    min-height: 32px;
+    min-width: 32px;
+    max-height: 160px;
+    max-width: 360px
+}
+
+.msg-mod .msg-line .msgPic:hover {
+    opacity: 0.8
+}
+
+.msg-line .msg-meal {
+    position: relative;
+    text-decoration: none;
+    width: 100%;
+    height: 107px;
+    display: block;
+    background: #eee;
+    border-radius: 5px;
+    overflow: hidden
+}
+
+.msg-line .msg-meal img {
+    display: inline-block;
+    margin-right: 10px;
+    width: 160px;
+    height: 107px;
+    vertical-align: middle
+}
+
+.msg-line .msg-meal h3 {
+    position: relative;
+    text-decoration: none;
+    display: inline-block;
+    width: 256px;
+    padding-right: 20px;
+    vertical-align: middle
+}
+
+.msg-line .msg-meal .price {
+    position: absolute;
+    bottom: 3px;
+    right: 294px;
+    display: inline-block;
+    padding: 5px 10px;
+    color: #fff;
+    background: #ff705e;
+    border-radius: 5px;
+    opacity: 0.9
+}
+
+#layerImg {
+    display: none
+}
+
+#fixed-msg {
+    width: 220px;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    height: auto;
+    overflow: hidden;
+    z-index: 99;
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    font-size: 14px
+}
+
+.non-msg {
+    display: block;
+    padding: 10px 20px;
+    background: #eee;
+    line-height: 20px;
+    color: #999
+}
+
+.non-msg em {
+    font-size: 10px
+}
+
+.msg-con {
+    padding: 10px 20px;
+    text-align: center;
+    background: #fff;
+    color: #666;
+    cursor: pointer
+}
+
+.msg-con:hover {
+    background: #fafafa
+}
+
+.msg-con.hover {
+    color: #fff;
+    background: #ff705e;
+    animation: 1s alternate infinite twinkle
+}
+
+.msg-con .tips-b {
+    display: none
+}
+
+.msg-con.hover em.tips-b {
+    display: inline-block
+}
+
+.msg-con.hover em.tips-a {
+    display: none
+}
+
+#fixed-msg .msg-icon {
+    display: inline-block;
+    margin-left: -8px;
+    width: 16px;
+    height: 16px;
+    background: url("//7tt06g.com2.z0.glb.qiniucdn.com/assets/chat/prev-msg-icon-e81946254d5e20af1f652a8695115914cd148a5356c296e1b280b2b123288b4d.png") no-repeat -8px -38px;
+    margin-right: 5px;
+    vertical-align: middle
+}
+
+#fixed-msg .msg-con .msg-icon {
+    background-position: -8px -68px
+}
+
+#fixed-msg .msg-con.hover .msg-icon {
+    background-position: -8px -8px
+}
+
+#fixed-msg .non-msg em {
+    display: block;
+    font-size: 10px
+}
+
+@-webkit-keyframes twinkle {
+    0% {
+        background: #fff
+    }
+    100% {
+        background: #ff705e
+    }
+}
+
+@-o-keyframes twinkle {
+    0% {
+        background: #fff
+    }
+    100% {
+        background: #ff705e
+    }
+}
+
+@-moz-keyframes twinkle {
+    0% {
+        background: #fff
+    }
+    100% {
+        background: #ff705e
+    }
+}
+
+@keyframes twinkle {
+    0% {
+        background: #fff
+    }
+    100% {
+        background: #ff705e
+    }
+}
+
+
+.loading {
+    background: url("//7tt06g.com2.z0.glb.qiniucdn.com/assets/chat/loader10-894762b61cfe4393a32b6f0ec16d11f9aaf5a6af78521d46f9b816c62423a970.gif") no-repeat center center #fff
+}
+
+.xubox_main {
+    padding: 0
+}
+
+.msg-row span {
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle;
+    width: 140px
+}
+
+.msg-row.opus span {
+    width: 130px
+}
+
+.progress {
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset;
+    height: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    overflow: hidden;
+    display: none
+}
+
+.progress-bar {
+    background-color: #428bca;
+    box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.15) inset;
+    color: #ffffff;
+    float: left;
+    font-size: 12px;
+    height: 100%;
+    line-height: 20px;
+    text-align: center;
+    transition: width 0.6s ease 0s;
+    width: 0;
+}
+
+.progress-striped .progress-bar {
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+    background-size: 40px 40px;
+}
+
+.progress.active .progress-bar {
+    animation: 2s linear 0s normal none infinite running progress-bar-stripes;
+}
+
+.progress-bar-success {
+    background-color: #5cb85c;
+}
+
+.progress-striped .progress-bar-success {
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+
+.progress-bar-info {
+    background-color: #5bc0de;
+}
+
+.progress-striped .progress-bar-info {
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+
+.progress-bar-warning {
+    background-color: #f0ad4e;
+}
+
+.progress-striped .progress-bar-warning {
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+
+.progress-bar-danger {
+    background-color: #d9534f;
+}
+
+.progress-striped .progress-bar-danger {
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+
+.xubox_layer {
+    display: none;
+    z-index: 19891016;
+    width: 800px;
+    height: 544px;
+    margin-left: -400px;
+    top: 10%;
+    left: 50%;
+    bottom: 10%;
+}
+
+.xubox_main {
+    background-color: #fff;
+    z-index: 19891015
+}
+
+.chat_welcome {
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 9px;
+    background: rgb(204, 204, 204) none repeat scroll 0% 0%;
+}
+
+.msg-reply .emoji-btn {
+    background: rgba(0, 0, 0, 0) url("emoji.png") no-repeat scroll center center;
+    cursor: pointer;
+    display: inline-block;
+    height: 30px;
+    margin-right: 9px;
+    text-indent: -9999px;
+    vertical-align: middle;
+    width: 30px;
+}
+
+.msg-btn {
+    position: relative;
+}
+
+.emoji-box {
+    background-color: #fff;
+    border: 1px solid #e7e7e7;
+    display: block;
+    padding: 5px;
+    position: absolute;
+    right: -1px;
+    top: -189px;
+    z-index: 19892016;
+    display: none;
+    width: 100%;
+}
+
+.emoji-box li {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.emoji-box li img {
+    height: 43px;
+    width: 43px;
+}
+
+.emoji-box li + li {
+    margin-left: 6px;
+}
+
+.emoji-box ul li:first-child {
+    margin-left: 15px;
+}
+
+.xubox_shade {
+    z-index: 19891000;
+    background-color: #fff;
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+}
+
+#img_shade {
+    background-color: #999999;
+    z-index: 19892000;
+    opacity: 1;
+}
+
+#img_layer {
+    top: 5%;
+    z-index: 19892001;
+    display: block;
+    width: auto;
+    overflow: overlay;
+    height: 100%;
+    bottom: 5%;
+}
+
+#img_layer img {
+    max-width: 800px;
+    max-height: 800px;
+}
+
+.msg-row {
+    opacity: 0.5;
+}
+
+.msg-row.hover {
+    opacity: 1;
+}
+
+.hidden {
+    display: none;
+}
+
+.msg-tip-voice{
+    height: 25px;
+    position: relative;
+    border-radius: 25px;
+    width: 5px;
+    display: inline-block;
+    padding: 0 25px;
+    color: #666;
+}
+time{
+    margin: 0 20px;
+    color: #999
+}
+.msg-tip-voice .sup{
+    display: inline-block;
+    height: 6px;
+    overflow: hidden;
+    margin-top: 5px;
+}
+.tip-left{
+    border: 1px solid #e7e7e7;
+}
+.tip-left:before{
+    background: url('http://qnm.hunliji.com/o_1avbg719gfb4st91bak1jd6icg8.png');
+    top: 8px;
+    left: -8px;
+}
+.tip-right{
+    border: 1px solid #d2eeff;
+    background: #f0f9ff;
+    text-align: right;
+}
+.tip-right:before{
+    top: 8px;
+    right: -8px;
+    background: url('http://qnm.hunliji.com/o_1avbg719gi661ehu1gt5uhk19ot9.png');
+}
+.tip-left:before,.tip-right:before{
+    position: absolute;
+    content:'';
+    width: 8px;
+    height: 8px;
+}
+
+.tip-left:after{
+    background: url('http://qnm.hunliji.com/o_1avbiomqk14fm1cf01s7hn291t0di.png');
+    top: 5px;
+    left: 7px;
+}
+.tip-right:after{
+    top: 5px;
+    right: 7px;
+    background: url('http://qnm.hunliji.com/o_1avbiomqkg8mc921v8u1bsvsh0j.png');
+}
+.tip-left:after,.tip-right:after{
+    position: absolute;
+    content:'';
+    width: 10px;
+    height: 14px;
+}
+.say:after{animation: say 1s ease-in infinite }
+@keyframes say {
+opacity:-webkit-linear-gradient(to right,0,1)
+}
+.msg-tip-voice sup{
+    position: relative;
+}
+.msg-tip-voice sup:after{
+    position: absolute;
+    content: '"';
+    left: 3px;
+    width: 8px;
+    height: 8px;
+    top: 3px;
+}
+
+*, :after, :before {
+    box-sizing: content-box;
+}

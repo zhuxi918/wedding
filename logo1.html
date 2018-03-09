@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=IE10,chrome=1">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    </meta>
+    <title>我的婚礼-登录</title>
+	<meta name="keywords" content="婚礼,结婚,婚纱照,婚纱摄影,婚庆,婚礼策划" />
+    <link href="css/hunqing.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="warp">
+    <div class="w">
+        <div class=" head">
+            <!--<img src="img/logo.jpg" width="120" height="60">-->
+        </div>
+        <div class=" main">
+            <div class="lf main_left">
+                <img src="img/app.jpg" width="440" height="310" style="margin-left: 100px;margin-top: 50px;">
+            </div>
+            <div class="lf main_right">
+                <div class="main_right_zhengti">
+                    <div class="main_right_zhengti_xiao">
+                        <div class="main_right_denglu_zi">登录</div>
+                        <div id="cuowu" class="cuowu"></div>
+                        <input class="main_right_zhuce_phone" type="text" id="phone" name="phone" max="11" required="" placeholder="手机号">
+                      	<div class="yanzheng">
+                      		<input class="main_right_zhuce_mima" type="text" id="code_input" name="code_input" max="11" required="" placeholder="短信验证码" >
+							<div class="yanzheng_xinxi">获取验证码 </div>
+                      	</div>
+                      	<div class="yanzheng">
+                        <input class="main_right_zhuce_mima" type="text" id="code_input" name="code_input" max="11" required="" placeholder="图形验证码" >
+						<div id="v_container" class="yanzheng_xinxi"></div>
+						</div>
+                        <input class="main_right_zhuce_denglu" type="submit" name="dosubmit" id="dosubmit" value="登录" >
+
+                      <!--  <div  class="main_right_denglu_zhuce"><a href="zhuce.html"> 注册 </a></div>
+
+                        <div class="main_right_sm">*登录即表示同意 <a href="#">《某某婚庆用户协议》</a> </div>
+
+                        <!--<div class="main_right_denglu_qq" >第三方登录   qq</div>-->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+        <div class=" main2">
+
+            <div class="w main2_w">
+                <div class="main2_fen_left">
+                    <span class="zi18">婚礼纪客服热线</span><br>
+                    <span class="zi12">电话：xxxxxxxx</span><br><br>
+                    <span class="zi20">工作时间：08：30-20:00</span>
+                    
+                </div>
+                <div class="main2_fen_center">
+                    <span class="zi18">下载婚礼纪手机版</span><br>
+                    <img src="img/logo.jpg">
+                </div>
+                <div class="main2_fen_center">
+                    <span class="zi18">关注我们</span><br><br>
+	                    <span class="zi12">微信公众号</span><br><br>
+	                    <span class="zi12">新浪微博</span><br><br>
+	            </div>
+	           <div class="main2_fen_center">
+                    <span class="zi18">关注我们</span><br><br>
+	                     <span class="zi12">加入我们</span><br><br>
+	                     <span class="zi12">联系我们</span><br><br>
+	                     <span class="zi12">合伙人招募</span><br><br>
+	                   
+	            </div>
+                <div class="main2_fen_right">
+                     <span class="zi18">联系我们</span><br><br>
+                    
+	                     <span class="zi12">反馈邮箱：xxxxx</span><br><br>
+	                     <span class="zi12">通讯地址：xxxxxx</span><br><br>
+                </div>
+            </div>
+		
+        </div>
+	   <div class="remen">
+	   	<span class="remencity">热门城市：<br /></span>
+	   		<div class="zi12">北京婚纱摄影&nbsp;&nbsp;&nbsp;&nbsp;北京婚纱摄影&nbsp;&nbsp;&nbsp;&nbsp;北京婚纱摄影&nbsp;&nbsp;&nbsp;&nbsp;北京婚纱摄影&nbsp;&nbsp;&nbsp;&nbsp;北京婚纱摄影&nbsp;&nbsp;&nbsp;&nbsp;北京婚纱摄影&nbsp;&nbsp;&nbsp;&nbsp;北京婚纱摄影&nbsp;&nbsp;&nbsp;&nbsp;北京婚纱摄影&nbsp;&nbsp;&nbsp;&nbsp;北京婚纱摄影&nbsp;&nbsp;&nbsp;&nbsp;北京婚纱摄影&nbsp;&nbsp;&nbsp;&nbsp;北京婚纱摄影&nbsp;&nbsp;&nbsp;&nbsp;北京婚纱摄影&nbsp;&nbsp;&nbsp;&nbsp;北京婚纱摄影&nbsp;&nbsp;&nbsp;&nbsp;
+	   		<br/></br/>北京婚纱摄影&nbsp;&nbsp;&nbsp;&nbsp;北京婚纱摄影&nbsp;&nbsp;&nbsp;&nbsp;北京婚纱摄影&nbsp;&nbsp;&nbsp;&nbsp;北京婚纱摄影&nbsp;&nbsp;&nbsp;&nbsp;更多&gt;&gt;
+	   		<br /><br />
+	   		</div>
+	 
+	     </div>     	
+    <div class="footer">
+        备案号：xxxxxxx  某某公司
+    </div>
+
+
+</div>
+</body>
+<script type="text/javascript" src="js/gVerify.js" ></script>
+<script>
+		
+		var verifyCode = new GVerify("v_container");
+
+		document.getElementById("dosubmit").onclick = function(){
+			var res = verifyCode.validate(document.getElementById("code_input").value);
+			if(res){
+				//alert("验证正确");
+				document.getElementById('cuowu').innerHTML = "";
+			}else{
+//				alert("验证码错误");
+				document.getElementById('cuowu').innerHTML = "输入的验证码错误！";
+			}
+		}
+		
+		
+	</script>
+	
+<script type="text/javascript" src="js/jquery-1.9.1.min.js" ></script>
+	<script>
+		
+
+		$("#phone").blur(function(){
+				var reg=/^[1][3,4,5,7,8][0-9]{9}$/;  
+				var phoneNum = document.getElementById("phone").value;//手机号码
+		       //alert(phoneNum);
+		       if(reg.test(phoneNum)){
+		       		//alert(phoneNum);
+		       		document.getElementById('cuowu').innerHTML = "";
+		       }else{
+		       		alert("输入的手机号有误");
+		       		document.getElementById('cuowu').innerHTML = "输入的手机号错误！";
+		       }
+		});
+	</script>
+</html>
