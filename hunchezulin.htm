@@ -211,6 +211,9 @@
 			<div class="videoBrowser">
 				<video id="videoPlayer" width="800" controls= true src="http://qcloud.rrmj.tv/2018/03/07/af46aa97d5ac462eb1ca7c26f13025b7.mp4.f40.mp4?sign=70f51564db3c9cc47495be7090a1fc2c&t=5aa0f9b1&r=6952369201319977977" ></video>
 			</div>
+			<div class="carDetails-container">
+
+			
 			<div class="carDetails">
 				<div class="images">
 					<div class="car-mPic">
@@ -226,6 +229,7 @@
 				
 				</div>
 				<div class="details">
+						<i class="close">X 关闭</i>
 					<h1>${data.title}</h1>
 					<p>
 						<span>¥ 300</span>
@@ -240,10 +244,46 @@
 						<span>|</span>
 						<li><span>所在地</span><span>${data}</span></li>
 					</ul>
-					<i>车辆配置</i>
+					<div>车辆配置</div>
+					<table>
+						<tr>
+							<td>发动机:</td>
+							<td>${data}</td>
+							<td>车辆级别:</td>
+							<td>${data}</td>
+							
+						</tr>
+						<tr>
+							<td>颜色:</td>
+							<td>${data}</td>
+							<td>驱动方式:</td>
+							<td>${data}</td>
+							</tr>
+						<tr>
+							<td>变速器:</td>
+							<td>${data}</td>
+							<td>燃油标号:</td>
+							<td>${data}</td>
+						</tr>
+					</table>
+					<div>选择数量</div>
 
+						<select name="carCounter" id="carCounter">
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+						</select>
+					<span>库存:</span>
+					<span>${data}辆</span>
+					<div class="btns">
+						<span class="btn">确认订单</span>
+						<span class="btn">加入购物车</span>
+					</div>
 				</div>
 			</div>
+		</div>
 		</div>
 
 		<div style="width: 1920px;height: 200px;float: left;">
