@@ -39,3 +39,10 @@ $(
         $(e.target).addClass('active').siblings().removeClass('active')
     })
 )
+
+$(
+    $(".item").click(e=>{
+        //window.location.href='hunlidetail.html'
+        console.log(e)
+    })
+)
